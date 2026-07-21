@@ -38,4 +38,6 @@ files {
     'web/dist/index.html',
     'web/dist/assets/index.js',
     'web/dist/assets/index.css',
+    -- Unlisted = 404 in game, and the brand row silently loses its logo.
+    'web/dist/atelier-logo.png',
 }

@@ -38,8 +38,33 @@ Config.includeHipAnchor = false
 
 --- Milliseconds to wait before applying a drawable while scrubbing with the
 --- arrow keys. Without this every keypress triggers a streaming request.
+--- The FIRST click on a slot is never delayed — the wait only kicks in while a
+--- slot is already being scrubbed.
 Config.applyDebounceMs = 120
+
+--- How a pack's local index (the NNN in the stream name, which restarts at 0 in
+--- every part) is turned into the global drawable index the engine wants.
+---
+---   'browse'  no mapping at all. Add-on items cannot be applied by clicking
+---             them; you walk the live range and pick by eye. Never wrong,
+---             never useful for a pack. Only mode="replace" items work.
+---   'offset'  baseline + localIndex, where the baseline is measured by the
+---             probe on this server. This is a GUESS: it assumes add-on
+---             drawables are appended after the vanilla ones in one contiguous
+---             block, and where several packs feed the same slot it also
+---             assumes an order this code cannot see. Force it only if you
+---             checked the probe printout and it matches your pack.
+---   'auto'    run the probe, then use 'offset' only if the probe found
+---             conclusive evidence for it and contradicted it nowhere.
+---             Otherwise stay on 'browse'. Default.
+---
+--- Note that 'auto' can still be wrong: the probe compares texture COUNTS, not
+--- pixels, so it can rule a mapping out for certain but can only ever make one
+--- look right. Read the probe output before trusting a dressed mannequin.
+Config.indexStrategy = 'auto'
 
 --- Print the index probe's findings to the client console on open.
 --- Leave this on until the index question in the README is answered.
+--- The probe itself ALWAYS runs (Config.indexStrategy = 'auto' is decided from
+--- it); this switch only controls whether the findings are printed and shown.
 Config.verboseProbe = true
