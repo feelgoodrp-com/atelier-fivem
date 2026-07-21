@@ -11,7 +11,8 @@ a viewer that finds the packs you built, dresses a mannequin with them, and
 shows the labels and groups you gave them in the workbench — instead of
 nameless index numbers.
 
-[![License: PolyForm NC 1.0.0](https://img.shields.io/badge/License-PolyForm%20NC%201.0.0-5865F2)](LICENSE.md)
+![Status: in development](https://img.shields.io/badge/Status-in%20development-faa61a)
+&nbsp;[![License: PolyForm NC 1.0.0](https://img.shields.io/badge/License-PolyForm%20NC%201.0.0-5865F2)](LICENSE.md)
 &nbsp;![FiveM](https://img.shields.io/badge/FiveM-cerulean-1f1f1f)
 &nbsp;![Standalone · ESX · qb-core · qbox](https://img.shields.io/badge/Standalone%20·%20ESX%20·%20qb--core%20·%20qbox-1f1f1f)
 
@@ -24,12 +25,16 @@ nameless index numbers.
 ---
 
 > [!WARNING]
-> **Early. Not yet proven in-game.** Everything here is written, reviewed and
-> structurally verified, but no part of it has run on a live FiveM server yet.
+> **In development — not yet proven in-game.**
+> Everything here is written, reviewed and structurally verified, but no part of
+> it has run on a live FiveM server yet. Expect rough edges, and expect the
+> config and the pack-manifest format to still change.
+>
 > The one genuinely open question — how add-on drawables are numbered at
 > runtime — is measured by the resource itself on first open, see
-> [Open questions](#open-questions). Treat this as a tool to help answer that,
-> not as a finished product.
+> [Open questions](#open-questions). If you try it, that measurement (printed to
+> the client console) is the single most useful thing you can send us on
+> [Discord](https://discord.gg/blpd).
 
 ## What it does
 
