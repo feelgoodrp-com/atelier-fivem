@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+
+# The built NUI IS shipped — a FiveM resource is consumed as-is, not built
+# on the server. Do not ignore web/dist.
